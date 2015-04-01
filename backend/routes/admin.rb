@@ -8,8 +8,9 @@ get '/admin' do
   uri.scheme = settings.scheme
   links = {
     :links => { 
-      :users => uri.site + settings.prefix + uri.path + '/users',
-      :trips => uri.site + settings.prefix + uri.path + '/trips'
+      :get_users => uri.site + settings.prefix + uri.path + '/users',
+      :get_trips => uri.site + settings.prefix + uri.path + '/trips',
+      :parent => parent_uri,
     }
   }.to_json
 end

@@ -10,7 +10,7 @@ get '/register' do
   result = {
     :links => { 
       :post_client => uri.site + settings.prefix + uri.path + '/client',
-      :post_lawyer => uri.site + settings.prefix + uri.path + '/host',
+      :post_host => uri.site + settings.prefix + uri.path + '/host',
       :parent => parent_uri,
     }
   }
